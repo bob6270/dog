@@ -1,0 +1,20 @@
+qqqqqqqqqqqqqHELLO!qqqqqqqqqqqq
+<br>{{ arg }}
+
+{% for arg in arg %}
+
+<br>{{ arg.title }}
+<br>{{ arg.desc }}
+<br>{{ arg.date }}
+<br>{{ arg.imag }}
+<br><img src='{{ arg.imag }}' width="1100" heigth="300" style="border:5px solid black">
+{% if arg.url %}
+<br>  <a href =  '{{ arg.url }}'>link</a>
+{% endif %}
+{% endfor %}
+<form class="" action="{% url 'home' %}">
+
+  <input type="submit" name="" value="home" class="btn btn-primary">
+
+
+</form>
