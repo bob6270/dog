@@ -5,7 +5,7 @@ from .models import Display3
 # Create your views here.
 def home(request):
     arg = Display.objects.all()
-    return render(request, 'men/home.html',{'arg':arg})
+    return render(request, 'men/home.html',{'args':arg})
 def page2(request):
     arg = Display2.objects.all()
 
