@@ -1,17 +1,26 @@
-Hello BOB! NEW CHANGE
+Hello BOB!
 <!--siony Retired6270% -->
-<!--<body style="background-color:GoldenRod;">
-<!--{{ arg }}-->
+<!--<body style="background-color:GoldenRod;">-->
+<style>
+  body {
+      background-image: url('men/images/beautiful-space-nebula1.jpg');
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-size: cover;
+      }
+</style>
 {% for arg in arg %}
 
-<!-- <br>{{ arg.title }}
+<!-- {{ arg }}
+{{ arg.imag }}  -->
+<br>{{ arg.title }}
 <br>{{ arg.desc }}
 <br>{{ arg.date }}
-<br>{{ arg.imag }} -->
+<br>{{ arg.imag }}
 <br><img src='{{ arg.imag }}' width="1100" heigth="300" style="border:5px solid black">
-{% if arg.url %}
-<!--<br>  <a href =  '{{ arg.url }}'>Viisit the accompaning site</a>-->
-{% endif %}
+  {% if arg.url %}
+  <br>  <a href =  '{{ arg.url }}'>link</a>
+  {% endif %}
 {% endfor %}
 <form class="" action="{% url 'page2' %}">
 
