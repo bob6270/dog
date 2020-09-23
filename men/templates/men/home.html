@@ -1,26 +1,37 @@
-Hello BOB!
-<!--siony Retired6270% -->
+<!--Hello BOB!
+siony Retired6270% -->
 <!--<body style="background-color:GoldenRod;">-->
 <style>
-  body {
-      background-image: url('men/images/8589130425037-deep-space-art-wallpaper-hd1.jpg');
-      background-repeat: no-repeat;
-      background-attachment: fixed;
-      background-size: cover;
-      }
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
 </style>
 {% for arg in args %}
 
 <!-- {{ arg }}
 {{ arg.imag }}  -->
-<br>{{ arg.title }}
+<!-- <br>{{ arg.title }}
 <br>{{ arg.desc }}
 <br>{{ arg.date }}
 <br>{{ arg.imag }}
-<br><img src='{{ arg.imag }}' width="1100" heigth="300" style="border:5px solid black">
-  {% if arg.url %}
-  <br>  <a href =  '{{ arg.url }}'>link</a>
-  {% endif %}
+{{ arg.bdgd }} -->
+<br><img src='{{ arg.imag }}' width="900" heigth="300" style="border:5px solid black">
+{% if arg.url %}
+<br>  <a href =  '{{ arg.url }}'>link</a>
+{% endif %}
+{% if arg.bdgd %}
+  <style>
+    body {
+      background-image: url('{{ arg.bdgd }}');
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-size: cover;
+      }
+  </style>
+{% endif %}
+
 {% endfor %}
 <form class="" action="{% url 'page2' %}">
 

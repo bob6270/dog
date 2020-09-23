@@ -7,6 +7,8 @@ class Display(models.Model):
     date = models.DateField(auto_now=False)
     url = models.URLField(blank=True)
     imag = models.ImageField(upload_to='men/images/')
+    bdgd = models.ImageField(upload_to='men/images/',blank=True)
+
 
 class Display2(models.Model):
     title = models.CharField(max_length=60)
