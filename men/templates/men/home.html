@@ -12,12 +12,13 @@ img {
 
 <!-- {{ arg }}
 {{ arg.imag }}  -->
-<!-- <br>{{ arg.title }}
-<br>{{ arg.desc }}
-<br>{{ arg.date }}
-<br>{{ arg.imag }}
-{{ arg.bdgd }} -->
+<br><center>{{ arg.title }}</center>
+<br><center>{{ arg.date }}</center>
+<!--<br>{{ arg.imag }} -->
+<!--{{ arg.bdgd }} -->
 <br><img src='{{ arg.imag }}' width="900" heigth="300" style="border:5px solid black">
+<br>{{ arg.desc }}
+
 {% if arg.url %}
 <br>  <a href =  '{{ arg.url }}'>link</a>
 {% endif %}
