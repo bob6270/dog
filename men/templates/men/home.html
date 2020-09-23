@@ -8,19 +8,23 @@ img {
   margin-right: auto;
 }
 </style>
+<style>
+    p {
+        text-align: center;
+    }
+</style>
 {% for arg in args %}
-
 <!-- {{ arg }}
 {{ arg.imag }}  -->
-<br><center>{{ arg.title }}</center>
+<br><center><h1>{{ arg.title }}</h1></center>
 <br><center>{{ arg.date }}</center>
 <!--<br>{{ arg.imag }} -->
 <!--{{ arg.bdgd }} -->
 <br><img src='{{ arg.imag }}' width="900" heigth="300" style="border:5px solid black">
-<br><center>{{ arg.desc }}</center>
-
+<!-- <br><center>{{ arg.desc|safe }}</center> -->
+<p align="center">{{ arg.desc|safe }}</p>
 {% if arg.url %}
-<br>  <a href =  '{{ arg.url }}'>link</a>
+<br><center>  <a href =  '{{ arg.url }}'>more info</a> </center>
 {% endif %}
 {% if arg.bdgd %}
   <style>

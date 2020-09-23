@@ -7,8 +7,9 @@ class Display(models.Model):
     url = models.URLField(blank=True)
     imag = models.ImageField(upload_to='men/images/')
     bdgd = models.ImageField(upload_to='men/images/',blank=True)
-    desc = models.CharField(max_length=600)
-
+    desc = models.TextField(max_length=600)
+    def __str__(self):
+        return self.title + self.url + self.desc
 
 class Display2(models.Model):
     title = models.CharField(max_length=60)
@@ -17,6 +18,8 @@ class Display2(models.Model):
     url = models.URLField(blank=True)
     imag = models.ImageField(upload_to='men/images/')
     bdgd = models.ImageField(upload_to='men/images/',blank=True)
+    def __str__(self):
+        return self.title
 
 class Display3(models.Model):
     title = models.CharField(max_length=60)
@@ -25,3 +28,5 @@ class Display3(models.Model):
     url = models.URLField(blank=True)
     imag = models.ImageField(upload_to='men/images/')
     bdgd = models.ImageField(upload_to='men/images/',blank=True)
+    def __str__(self):
+        return self.title
