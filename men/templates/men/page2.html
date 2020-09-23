@@ -1,6 +1,12 @@
 <!--HELLO! 2-->
 <!--<body style="background-color:DarkSalmon;"> -->
-  <style>
+<style>
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+</style>  <style>
     body {
       background-image: url('men/images/Beautiful_Space_3D_Screensaver-2588681.jpg');
       background-repeat: no-repeat;
@@ -21,6 +27,16 @@
 <br><img src='{{ arg.imag }}' width="1100" heigth="300" style="border:5px solid black">
 {% if arg.url %}
 <br>  <a href =  '{{ arg.url }}'>link</a>
+{% endif %}
+{% if arg.bdgd %}
+  <style>
+    body {
+      background-image: url('{{ arg.bdgd }}');
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-size: cover;
+      }
+  </style>
 {% endif %}
 {% endfor %}
 
