@@ -1,46 +1,48 @@
-<!--Hello BOB!
-siony Retired6270% -->
-<body style="background-color:GoldenRod;">
-<style>
-img {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-}
-</style>
-<style>
-    p {
-        text-align: center;
+    <title>Hello, world!</title>
+    <body style="background-color:GoldenRod;">
+    <style>
+    img {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
     }
-</style>
-{% for arg in args %}
-<!-- {{ arg }}
-{{ arg.imag }}  -->
-<br><center><h1>{{ arg.title }}</h1></center>
-<br><center>{{ arg.date }}</center>
-<!--<br>{{ arg.imag }} -->
-<!--{{ arg.bdgd }} -->
-<br><img src='{{ arg.imag }}' width="900" heigth="300" style="border:5px solid black">
-<!-- <br><center>{{ arg.desc|safe }}</center> -->
-<p align="center">{{ arg.desc|safe }}</p>
-{% if arg.url %}
-<br><center>  <a href =  '{{ arg.url }}'>more info</a> </center>
-{% endif %}
-{% if arg.bdgd %}
-  <style>
-    body {
-      background-image: url('{{ arg.bdgd }}');
-      background-repeat: no-repeat;
-      background-attachment: fixed;
-      background-size: cover;
-      }
-  </style>
-{% endif %}
+    </style>
+    <style>
+        p {
+            text-align: center;
+        }
+    </style>
 
-{% endfor %}
-<form class="" action="{% url 'page2' %}">
+    <!--Hello BOB!
+    siony Retired6270% -->
+    {% for arg in args %}
+    <!-- {{ arg }}
+    {{ arg.imag }}  -->
+    <br><center><h1>{{ arg.title }}</h1></center>
+    <br><center>{{ arg.date }}</center>
+    <!--<br>{{ arg.imag }} -->
+    <!--{{ arg.bdgd }} -->
+    <br><img src='{{ arg.imag }}' width="900" heigth="300" style="border:5px solid black">
+    <!-- <br><center>{{ arg.desc|safe }}</center> -->
+    <p align="center">{{ arg.desc|safe }}</p>
+    {% if arg.url %}
+    <br><center>  <a href =  '{{ arg.url }}'>more info</a> </center>
+    {% endif %}
+    {% if arg.bdgd %}
+      <style>
+        body {
+          background-image: url('{{ arg.bdgd }}');
+          background-repeat: no-repeat;
+          background-attachment: fixed;
+          background-size: cover;
+          }
+      </style>
+    {% endif %}
 
-  <input type="submit" name="" value="Page2" class="btn btn-primary">
+    {% endfor %}
+    <form class="" action="{% url 'page2' %}">
+
+      <input type="submit" name="" value="Page2" class="btn btn-primary">
 
 
-</form>
+    </form>

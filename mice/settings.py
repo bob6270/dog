@@ -25,7 +25,7 @@ SECRET_KEY = 'bfm7rk@$!l$6r@cw2xlrarjh2_0%e74ozf)q3wlh9n9-!s(abw'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['localhost']
 #I'm working in Django 1.8. I have set ALLOWED_HOSTS as follows, in both my local and deployed settings: ALLOWED_HOSTS = ['localhost', 'my.deployed.url'] That way I don't need to change the settings in the deployed version. (Not that this is difficult to do, it's just convenient this way.)
 # Application definition
 
